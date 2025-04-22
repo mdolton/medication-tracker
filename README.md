@@ -49,12 +49,12 @@ The application will be available at `http://localhost:3000`.
 
 ### Building and Running with Docker Compose
 
-1. Create a `.env` file:
+1. Create a `docker-compose.yml` file:
 ```bash
-cp .env.example .env
+cp docker-compose.yml.example docker-compose.yml
 ```
 
-2. Edit the `.env` file and add your OpenAI API key:
+2. Edit the `docker-compose.yml` file and add your OpenAI API key:
 ```
 OPENAI_API_KEY=your-api-key-here
 ```
