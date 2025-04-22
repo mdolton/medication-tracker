@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["node", "express", "cors"],
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": false
+  },
+  "include": ["server.ts", "src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"]
+} 

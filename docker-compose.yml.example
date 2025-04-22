@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  medication-tracker:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - OPENAI_API_KEY=<API_KEY>
+    volumes:
+      - ./database.sqlite:/app/database.sqlite
+    restart: unless-stopped 
