@@ -18,8 +18,7 @@ import {
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { ProfileManagerProps } from '../types';
-
-const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:${window.location.port || 3000}/api`;
+import { API_BASE_URL } from '../config';
 
 const ProfileManager: React.FC<ProfileManagerProps> = ({
   onSelectProfile,
