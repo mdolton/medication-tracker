@@ -21,7 +21,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Medication } from '../types';
 import ReactMarkdown from 'react-markdown';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000/api';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `${window.location.protocol}//${window.location.hostname}:3000/api`;
 
 interface MedicationListProps {
   medications: Medication[];
