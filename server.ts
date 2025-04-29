@@ -126,7 +126,7 @@ const checkInteractions = async (req: Request, res: Response, next: NextFunction
     const prompt = `You are a clinical‑pharmacology assistant. When asked about drug interactions or optimal dosing times, you must only cite information reputable medical sources like WebMD, PubMed, Mayo Clinic, Examine.com, Nature, etc. 
     Analyze and provide a bullet-pointed summary of potential interactions and provide a recommended daily schedule with concrete recommendations for only these medications and supplements:: ${medicationList}. 
     Consider dosage, frequency, and any notes provided. Consider medically indicated drug combinations. Provide a detailed analysis of potential interactions, 
-    risks, and recommendations.`;
+    risks, and recommendations. If a medication or supplement should be taken with food, please indicate as such and take that into account when suggesting dosing schedules.`;
     const completion = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [
